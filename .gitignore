@@ -1,1 +1,1 @@
-.idea/
+echo ".idea/" >> .gitignore
