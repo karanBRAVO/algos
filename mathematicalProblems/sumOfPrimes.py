@@ -15,17 +15,18 @@ def checkPrime(num):
 
 
 def sumOfPrimes(n):
-    primeNumArr = []
     num = 2
-    isPrime = False
+    sumEle = 0 
+
     while num <= n:
-        isPrime = checkPrime(num)
-        if isPrime:
-            primeNumArr.append(num)
-        num += 1
-    sumEle = 0
-    for ele in primeNumArr:
-        sumEle += ele
+        if checkPrime(num):
+            sumEle += num
+
+        if num >= 3:
+            num += 2
+        else:
+            num += 1
+
     return sumEle
 
 
